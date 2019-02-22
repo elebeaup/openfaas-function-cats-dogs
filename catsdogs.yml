@@ -1,0 +1,11 @@
+provider:
+  name: faas
+  gateway: http://localhost:31112
+
+functions:
+  catsdogs:
+    lang: python3-debian-flask
+    handler: ./catsdogs
+    image: catsdogs:0.1
+    environment:
+      exec_timeout: 30s
