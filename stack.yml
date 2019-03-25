@@ -9,3 +9,14 @@ functions:
     image: catsdogs:0.1
     environment:
       exec_timeout: 30s
+  classifier:
+    lang: node
+    handler: ./classifier
+    image: classifier:0.1
+    secrets:
+      - minio-secret-key
+    environment:
+      write_debug: true
+      MINIO_ENDPOINT: minio-service.default.svc.cluster.local
+      MINIO_PORT: 9000
+      PREDICT_ENDPOINT: http://gateway.openfaas.svc.cluster.local:8080/function/catsdogs

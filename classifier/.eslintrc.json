@@ -1,0 +1,19 @@
+{
+  "plugins": ["node"],
+  "extends": ["eslint:recommended", "plugin:node/recommended"],
+  "rules": {
+      "node/exports-style": ["error", "module.exports"],
+      "arrow-body-style": ["error", "as-needed"],
+      "brace-style": "error",
+      "key-spacing": ["error", { "beforeColon": false }],
+      "no-console": "warn",
+      "no-multi-spaces": "error",
+      "object-curly-spacing": ["error", "always"],
+      "prefer-template": "error",
+      "quotes": ["error", "single"],
+      "quote-props": ["error", "consistent"],
+      "semi": "error",
+      "no-var": "error",
+      "no-shadow": "error"
+  }
+}
